@@ -1,12 +1,10 @@
 <div align="center">
   <h1>Tmux Theme</h1>
   
-  ---
+Originally a Tokyo Night forked from [https://github.com/fabioluciano/tmux-tokyo-night](abioluciano/tmux-tokyo-night)  ---
     
   **[<kbd> <br> Features <br> </kbd>][features]**
-  **[<kbd> <br> Screenshots <br> </kbd>][screenshots]**
   **[<kbd> <br> Install <br> </kbd>][install]**
-  **[<kbd> <br> Available Configurations <br> </kbd>][available-configurations]**
   **[<kbd> <br> Plugins <br> </kbd>][plugins]**
   
   ---
@@ -27,14 +25,6 @@
 - **yay** - Show yay;
 - **battery** - Show battery;
 
-## Screenshots
-
-### Tokyo Night - Default Variation
-
-| Inactive                                                                                                             | Active                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| ![Tokyo Night tmux theme - Default Variation](./assets/tokyo-night.png "Tokyo Night tmux theme - Default Variation") | ![Tokyo Night tmux theme - Default Variation](./assets/tokyo-night-active.png "Tokyo Night tmux theme - Default Variation") |
-
 ## Install
 
 Add plugin to the list of `TPM` plugins in `.tmux.conf`:
@@ -47,17 +37,17 @@ Hit <kbd>prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You can 
 
 ## Available Configurations
 
-| Configuration                       | Description                               | Avaliable Options                                                       | Default            |
-| ----------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------- | ------------------ |
-| `@theme_variation`                  | The tokyo night theme variation to be use | `night`, `storm`, `moon`                                                | `night`            |
-| `@theme_active_pane_border_style`   |                                           |                                                                         | `#737aa2`          |
-| `@theme_inactive_pane_border_style` |                                           |                                                                         | `#292e42`          |
-| `@theme_left_separator`             |                                           |                                                                         | ``                |
-| `@theme_right_separator`            |                                           |                                                                         | ``                |
-| `@theme_window_with_activity_style` |                                           |                                                                         | `italics`          |
-| `@theme_status_bell_style`          |                                           |                                                                         | `bold`             |
-| `@theme_plugins`                    |                                           | `datetime`, `weather`, `playerctl`, `spt`, `homebrew`, `yay`, `battery` | `datetime,weather` |
-| `@theme_disable_plugins`            | Disables plugins                          | `1`, `0`                                                                | `0`                |
+| Configuration                       | Description      | Avaliable Options                                                       | Default            |
+| ----------------------------------- | ---------------- | ----------------------------------------------------------------------- | ------------------ |
+| `@theme_variation`                  |                  | `dark`                                                                  | `dark`             |
+| `@theme_active_pane_border_style`   |                  |                                                                         | `#737aa2`          |
+| `@theme_inactive_pane_border_style` |                  |                                                                         | `#292e42`          |
+| `@theme_left_separator`             |                  |                                                                         | ``                |
+| `@theme_right_separator`            |                  |                                                                         | ``                |
+| `@theme_window_with_activity_style` |                  |                                                                         | `italics`          |
+| `@theme_status_bell_style`          |                  |                                                                         | `bold`             |
+| `@theme_plugins`                    |                  | `datetime`, `weather`, `playerctl`, `spt`, `homebrew`, `yay`, `battery` | `datetime,weather` |
+| `@theme_disable_plugins`            | Disables plugins | `1`, `0`                                                                | `0`                |
 
 ## Plugins
 
@@ -117,58 +107,3 @@ Shows battery charging status (charging or discharging) and battery percentage.
 | `@theme_plugin_battery_yellow_accent_color_icon` | Icon color when < yellow threshold | Palette color     | orange   |
 | `@theme_plugin_battery_green_accent_color`       | Color when > yellow threshold      | Palette color     | blue7    |
 | `@theme_plugin_battery_green_accent_color_icon`  | Icon color when > yellow threshold | Palette color     | blue0    |
-
-### Example configuration
-
-tmux.conf
-
-```bash
-set -g @plugin 'tmux-plugins/tpm'
-
-set -g @plugin 'tmux-plugins/tmux-pain-control'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-logging'
-
-set -g @plugin 'fabioluciano/tmux-tokyo-night'
-
-### Tokyo Night Theme configuration
-set -g @theme_variation 'moon'
-set -g @theme_left_separator ''
-set -g @theme_right_separator ''
-set -g @theme_plugins 'datetime,weather,playerctl,yay'
-
-run '~/.tmux/plugins/tpm/tpm'
-```
-
-### Transparency examples
-
-Enable transparency with default separators:
-
-```bash
-### Enable transparency
-set -g @theme_transparent_status_bar 'true'
-```
-
-![Screenshot 2024-09-07 at 12 41 12](https://github.com/user-attachments/assets/56287ccb-9be9-4aa5-a2ab-ec48d2b2d08a)
-
-####
-
-Can also use custom separators:
-
-```bash
-### Enable transparency
-set -g @theme_left_separator ''
-set -g @theme_right_separator ''
-set -g @theme_transparent_status_bar 'true'
-set -g @theme_transparent_left_separator_inverse ''
-set -g @theme_transparent_right_separator_inverse ''
-
-```
-
-![Screenshot 2024-09-07 at 12 39 35](https://github.com/user-attachments/assets/a33417b1-34e0-4212-952e-7ef1e240e943)
-
-[features]: #features
-[screenshots]: #screenshots
-[install]: #install
-[available-configurations]: #available-configurations
-[plugins]: #plugins
