@@ -1,8 +1,6 @@
 <div align="center">
-  <h1>Tokyo Night Tmux Theme</h1>
+  <h1>Tmux Theme</h1>
   
-  <h4>A Tokyo Night tmux theme directly inspired from Tokyo Night vim theme</h4>
-    
   ---
     
   **[<kbd> <br> Features <br> </kbd>][features]**
@@ -42,7 +40,7 @@
 Add plugin to the list of `TPM` plugins in `.tmux.conf`:
 
 ```
-set -g @plugin 'fabioluciano/tmux-tokyo-night'
+set -g @plugin 'ChadLefort/tmux-theme'
 ```
 
 Hit <kbd>prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You can now use the plugin.
@@ -67,29 +65,30 @@ Hit <kbd>prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You can 
 
 > Prints informations about the current date and time.
 
-| Configuration                              | Description | Avaliable Options | Default |
-| ------------------------------------------ | ----------- | ----------------- | ------- |
-| `@theme_plugin_datetime_icon`              |             | Any character 📅  | Nerd Font 'Calendar' icon        |
-| `@theme_plugin_datetime_accent_color`      |             |                   |         |
-| `@theme_plugin_datetime_accent_color_icon` |             |                   |         |
-| `@theme_plugin_datetime_format`            |             |                   |         |
+| Configuration                              | Description | Avaliable Options | Default                   |
+| ------------------------------------------ | ----------- | ----------------- | ------------------------- |
+| `@theme_plugin_datetime_icon`              |             | Any character 📅  | Nerd Font 'Calendar' icon |
+| `@theme_plugin_datetime_accent_color`      |             |                   |                           |
+| `@theme_plugin_datetime_accent_color_icon` |             |                   |                           |
+| `@theme_plugin_datetime_format`            |             |                   |                           |
 
 ### Weather
 
 > Prints informations about the current weather. It uses `jq` to parse the response. Make shure to have it;
 
-| Configuration                             | Description | Avaliable Options | Default |
-| ----------------------------------------- | ----------- | ----------------- | ------- |
-| `@theme_plugin_weather_icon`              |             | Any character 🌡️  |  Font Awesome 'Cloud' icon        |
-| `@theme_plugin_weather_accent_color`      |             |                   |         |
-| `@theme_plugin_weather_accent_color_icon` |             |                   |         |
-| `@theme_plugin_weather_format`            | Format for displaying weather information | `%t`, `%c`, `%h`, `%w` (temperature, condition, humidity, wind) | `%t+H:%h` |
-| `@theme_plugin_weather_location`          | Location for weather (city/country)   | `"City, Country"`  | IP-based location detection |
+| Configuration                             | Description                               | Avaliable Options                                               | Default                     |
+| ----------------------------------------- | ----------------------------------------- | --------------------------------------------------------------- | --------------------------- |
+| `@theme_plugin_weather_icon`              |                                           | Any character 🌡️                                                | Font Awesome 'Cloud' icon   |
+| `@theme_plugin_weather_accent_color`      |                                           |                                                                 |                             |
+| `@theme_plugin_weather_accent_color_icon` |                                           |                                                                 |                             |
+| `@theme_plugin_weather_format`            | Format for displaying weather information | `%t`, `%c`, `%h`, `%w` (temperature, condition, humidity, wind) | `%t+H:%h`                   |
+| `@theme_plugin_weather_location`          | Location for weather (city/country)       | `"City, Country"`                                               | IP-based location detection |
 
 #### Example
-  ```
-  set -g @theme_plugin_weather_location 'Blacksburg, United States'
-  ```
+
+```
+set -g @theme_plugin_weather_location 'Blacksburg, United States'
+```
 
 ### Playerctl
 
