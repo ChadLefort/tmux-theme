@@ -1,15 +1,4 @@
-<div align="center">
-  <h1>Tmux Theme</h1>
-  
-Originally a Tokyo Night forked from [https://github.com/fabioluciano/tmux-tokyo-night](abioluciano/tmux-tokyo-night)  ---
-    
-  **[<kbd> <br> Features <br> </kbd>][features]**
-  **[<kbd> <br> Install <br> </kbd>][install]**
-  **[<kbd> <br> Plugins <br> </kbd>][plugins]**
-  
-  ---
-    
-</div>
+Originally a Tokyo Night forked from [https://github.com/fabioluciano/tmux-tokyo-night](abioluciano/tmux-tokyo-night) ---
 
 ## Features
 
